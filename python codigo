@@ -3,64 +3,64 @@ import tkinter as tk
 from tkinter import ttk
 import webbrowser
 
-# Function to fetch NGO data
+# Função para obter dados das ONGs
 def get_ongs_data():
-    # Load data from JSON file
+    # Carregar dados do arquivo JSON
     with open("ongs.json", encoding='utf-8') as f:
         data = json.load(f)
-    
+
     return data["ongs"]
 
-# Function to refresh NGO data and update UI
+# Função para atualizar dados das ONGs e atualizar a interface do usuário (UI)
 def refresh_ongs():
     global ongs
     ongs = get_ongs_data()
     update_ui()
 
-# Function to update UI with new NGO data
+# Função para atualizar a interface do usuário (UI) com os novos dados das ONGs
 def update_ui():
     global displayed_ongs_index
-    # Destroy existing widgets
+    # Destruir widgets existentes
     for child in frame.winfo_children():
         child.destroy()
 
-    # Show information for two NGOs
+    # Mostrar informações para duas ONGs
     for idx, ong_index in enumerate(displayed_ongs_index, start=1):
         ong = ongs[ong_index]
-        # Create label for NGO name and reliability
-        ttk.Label(frame, text=f"{ong['nome']}   {ong['confiabilidade']}", font=("Helvetica", 10, "bold")).grid(row=idx, column=1, sticky="w", padx=10, pady=5)
+        # Criar rótulo para nome da ONG e confiabilidade
+        ttk.Label(frame, text=f"{ong['nome']}   {ong['confiabilidade']}", font=("Helvetica", 10, "bold")).grid(row=idx, column=1, sticky="w", padx=10, pady=5)
 
-        # Create label for NGO description
+        # Criar rótulo para descrição da ONG
         ttk.Label(frame, text=ong["descricao"], wraplength=300, font=("Helvetica", 9)).grid(row=idx, column=2, padx=10, pady=5)
 
-        # Create button to open NGO website
+        # Criar botão para abrir o site da ONG
         open_button = ttk.Button(frame, text="Visitar", command=lambda url=ong["url"]: webbrowser.open_new_tab(url))
         open_button.grid(row=idx, column=3, padx=10, pady=5)
 
-# Function to toggle displayed NGOs
+# Função para alternar as ONGs exibidas
 def toggle_ongs():
     global displayed_ongs_index
     displayed_ongs_index = [(displayed_ongs_index[0] + 2) % len(ongs), (displayed_ongs_index[1] + 2) % len(ongs)]
     update_ui()
 
-# Create the main window
+# Criar a janela principal
 root = tk.Tk()
 root.title("ONGs Para Ajudar No RS")
 
-# Create a frame to hold the NGO links
+# Criar um frame para conter os links das ONGs
 frame = ttk.Frame(root, padding="10")
 frame.grid(row=0, column=0, sticky="nsew")
 
-# Initialize NGO data
+# Inicializar dados das ONGs
 ongs = get_ongs_data()
 
-# Initially display first two NGOs
+# Inicialmente exibir as duas primeiras ONGs
 displayed_ongs_index = [0, 1]
 update_ui()
 
-# Create a button to toggle displayed NGOs
+# Criar um botão para alternar as ONGs exibidas
 toggle_button = ttk.Button(root, text="Mostrar outras ONGs", command=toggle_ongs)
 toggle_button.grid(row=1, column=0, sticky="w", padx=10, pady=5)
 
-# Run the main event loop
+# Executar o loop principal de eventos
 root.mainloop()
