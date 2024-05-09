@@ -1,0 +1,41 @@
+{
+    "ongs": [
+      {
+        "nome": "Grad Brasil",
+        "url": "https://gradbrasil.org.br/",
+        "confiabilidade": "⭐️⭐️⭐️",
+        "descricao": "ONG dedicada a ajudar estudantes do Rio Grande do Sul a ingressar no mercado de trabalho."
+      },
+      {
+        "nome": "Banco de Alimentos",
+        "url": "https://bancodealimentos.org.br/",
+        "confiabilidade": "⭐️⭐️⭐️⭐️",
+        "descricao": "ONG que combate a fome e o desperdício de alimentos no Rio Grande do Sul."
+      },
+      {
+        "nome": "Vakinha",
+        "url": "https://www.vakinha.com.br/",
+        "confiabilidade": "⭐️⭐️⭐️⭐️",
+        "descricao": "Plataforma de crowdfunding para arrecadar fundos para diversas causas, incluindo aquelas no Rio Grande do Sul."
+      },
+      {
+        "nome": "Visão Mundial",
+        "url": "https://visaomundial.org.br/",
+        "confiabilidade": "⭐️⭐️⭐️",
+        "descricao": "ONG que trabalha para ajudar crianças em situação de vulnerabilidade no Rio Grande do Sul e ao redor do mundo."
+      },
+      {
+        "nome": "SOS Enchentes RS",
+        "url": "https://sosenchentes.rs.gov.br/inicial",
+        "confiabilidade": "⭐️⭐️⭐️",
+        "descricao": "Site do governo do RS dedicado a fornecer informações sobre enchentes e assistência às vítimas no estado."
+      },
+      {
+        "nome": "Benfeitoria",
+        "url": "https://emergencia.paraquemdoar.com.br/?ref=home_benfeitoria&_gl=1%2Ajz31c6%2A_ga%2AMzQxMjg4OTc1LjE3MTUyNzAzMjQ.%2A_ga_59FJWS3NDB%2AMTcxNTI3MDMyNC4xLjAuMTcxNTI3MDMyNC42MC4wLjA.&ctx=HomeGeneric",
+        "confiabilidade": "⭐️⭐️⭐️⭐️",
+        "descricao": "Plataforma de arrecadação de emergência para causas diversas, incluindo ajuda humanitária no Rio Grande do Sul."
+      }
+    ]
+  }
+  
